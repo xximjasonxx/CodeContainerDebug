@@ -1,0 +1,28 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": ".NET Core Docker Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildForDebug",
+            "program": "Debugtest.dll",
+            "cwd": "/app",
+            "sourceFileMap": {
+                "/src": "${workspaceRoot}"
+            },
+            "pipeTransport": {
+                "pipeProgram": "docker",
+                "pipeCwd": "${workspaceRoot}",
+                "pipeArgs": [
+                    "exec -i docker.dotnet.debug_1"
+                ],
+                "quoteArgs": false,
+                "debuggerPath": "/vsdbg/vsdbg"
+            }
+        }
+    ,]
+}
