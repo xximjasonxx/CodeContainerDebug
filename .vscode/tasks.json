@@ -11,6 +11,13 @@
                     "./scripts/dockerTask.sh buildForDebug"
                 ]
             },
+            "linux": {
+                "command": "/bin/bash",
+                "args": [
+                    "-c",
+                    "./scripts/dockerTask.sh buildForDebug"
+                ]
+            },
             "problemMatcher": "$msCompile",
             "group": {
                 "kind": "build",
@@ -21,6 +28,13 @@
             "label": "cleanup",
             "type": "shell",
             "osx": {
+                "command": "/bin/bash",
+                "args": [
+                    "-c",
+                    "./scripts/dockerTask.sh cleanup"
+                ]
+            },
+            "linux": {
                 "command": "/bin/bash",
                 "args": [
                     "-c",
